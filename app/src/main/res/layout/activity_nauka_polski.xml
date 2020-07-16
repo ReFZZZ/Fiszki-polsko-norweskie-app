@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    android:orientation="vertical"
+    android:background="#79c150"
+    tools:context=".nauka_polski">
+
+    <TextView
+        android:id="@+id/numer_fiszki"
+        android:layout_width="99dp"
+        android:layout_height="46dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="294dp"
+        android:layout_height="206dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="słowo"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/b_nastepna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bChangeText"
+        android:text="Nastepna" />
+
+    <Button
+        android:id="@+id/bChangeText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obróć" />
+</RelativeLayout>

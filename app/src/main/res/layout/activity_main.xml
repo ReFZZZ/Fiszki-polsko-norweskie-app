@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#79c150"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b_fiszki"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Fiszki"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <Button
+        android:id="@+id/b_autor"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="autor"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <Button
+        android:id="@+id/b_wyjscie"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Wyjście"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+</LinearLayout>
