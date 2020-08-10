@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fiszki</string>
+    <color name="red" >#C73B3B</color>
+    <color name="green" >#158467</color>
+    <color name="blue" >#15B9BF</color>
+    <color name="standard">#ffe78f</color>
 </resources>

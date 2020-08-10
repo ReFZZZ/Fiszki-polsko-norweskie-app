@@ -30,10 +30,11 @@ public class nauka_polski extends AppCompatActivity {
 
             {"91","dobrze","greit"},{"92","bez(czegoś)","uten"},{"93","dokładnie","akkurat"},{"94","ostatni","siste"},{"95","świeży","fersk"},{"96","lub","eller"},{"97","tutaj","hit"},{"98","od","fra"},{"99","obok","forbi"},{"100","wzdłuż","langs"},
     };
+  View view;
     //FLAGA SLUŻY DO ZMIANY JEZYKA. GDZIE 0- POLSKI, 1- INNY
     private Integer flag =1;
     private Integer losowa= rand.nextInt(100) ;
-
+    private String cutString = new String();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,8 @@ public class nauka_polski extends AppCompatActivity {
 
         message.setText(tablica[losowa][1]);
         numer_fiszki.setText(tablica[losowa][0]);
+
+        view  = this.getWindow().getDecorView();
 
         // PRZYCISK "DALEJ"
         b_nastepna=(Button) findViewById(R.id.b_nastepna);
@@ -62,6 +65,7 @@ public class nauka_polski extends AppCompatActivity {
                 //ZMIANA FISZKI ORAZ ZMIANA NUMERU FISZKI
                 message.setText(tablica[losowa][1]);
                 numer_fiszki.setText(tablica[losowa][0]);
+
             }
         });
 
@@ -71,9 +75,18 @@ public class nauka_polski extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 numer_fiszki.setText(tablica[losowa][0]);
+                cutString= tablica[losowa][2].substring(0,3);
+                switch (cutString){
+                    case "en " : {view.setBackgroundResource(R.color.blue);break;}
+                    case "ei " : {view.setBackgroundResource(R.color.red);break;}
+                    case "et " : {view.setBackgroundResource(R.color.green);break;}
+                    default: view.setBackgroundResource(R.color.standard);break;
+                }
                 switch(flag) {
-                    case 0:   message.setText(tablica[losowa][1]);flag =1; break;
-                    case 1:   message.setText(tablica[losowa][2]);flag =0; break;
+                    case 0:   message.setText(tablica[losowa][1]);flag =1;
+                    break;
+                    case 1:   message.setText(tablica[losowa][2]);flag =0;
+                    break;
                 }
             }
         });

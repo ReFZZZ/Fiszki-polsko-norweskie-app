@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:padding="40dp"
     android:orientation="vertical"
-    android:background="#79c150"
     tools:context=".nauka_polski">
 
     <TextView
