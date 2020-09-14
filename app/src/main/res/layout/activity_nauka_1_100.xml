@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="40dp"
     android:orientation="vertical"
-    tools:context=".nauka_polski">
+    tools:context=".nauka_1_100">
 
     <TextView
         android:id="@+id/numer_fiszki"

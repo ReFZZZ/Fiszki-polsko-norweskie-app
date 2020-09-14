@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nauka_polski" />
+        <activity android:name=".nauka_201_300"></activity>
+        <activity android:name=".nauka_101_200" />
+        <activity android:name=".menu" />
+        <activity android:name=".nauka_1_100" />
         <activity android:name=".autor" />
         <activity android:name=".MainActivity">
             <intent-filter>

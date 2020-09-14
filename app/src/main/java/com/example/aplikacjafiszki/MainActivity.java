@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFiszki() {
-        Intent intent = new Intent(this, nauka_polski.class);
+        Intent intent = new Intent(this, menu.class);
         startActivity(intent);
 
     }
