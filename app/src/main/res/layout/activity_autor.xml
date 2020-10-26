@@ -12,6 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
-        android:text="Autor\nRafał Osypanka\n2020"
+        android:text="Autor\nReFZ\n2020"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

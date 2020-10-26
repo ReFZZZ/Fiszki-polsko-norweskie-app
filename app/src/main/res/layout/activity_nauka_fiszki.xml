@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:padding="40dp"
     android:orientation="vertical"
-    tools:context=".nauka_1_100">
+    tools:context=".nauka_1_50">
 
     <TextView
         android:id="@+id/numer_fiszki"
         android:layout_width="99dp"
         android:layout_height="46dp"
-        android:textSize="20dp"
         android:gravity="center"
-        android:text=" " />
+        android:text=" "
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tvMessage"
@@ -41,4 +41,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Obróć" />
+
 </RelativeLayout>
