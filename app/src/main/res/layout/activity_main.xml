@@ -1,35 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
     android:orientation="vertical"
-    android:background="@color/standard"
+    android:id="@+id/main_layout"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Fiszki \n Polsko - Norweskie"
+        android:textAlignment="center"
+        android:textColor="#e5e6e5"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:layout_marginHorizontal="30dp"
+        android:src="@drawable/polnor" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10pt"
+        android:layout_marginBottom="15pt"
+        android:background="#64dfdf"
+
+        />
 
     <Button
         android:id="@+id/b_fiszki"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Fiszki"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button_main_activity"
+        android:textColor="#FFFFFF"
+        android:text="Fiszki" />
 
     <Button
         android:id="@+id/b_autor"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="autor"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="218dp" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button_main_activity"
+        android:textColor="#FFFFFF"
+        android:text="O aplikacji"
+        />
 
     <Button
         android:id="@+id/b_wyjscie"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Wyjście"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button_main_activity"
+        android:textColor="#FFFFFF"
+        android:text="wyjście"
+        />
 
 </LinearLayout>

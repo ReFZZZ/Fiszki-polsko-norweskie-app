@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nauka_401_450"></activity>
+        <activity android:name=".nauka_401_450"/>
         <activity android:name=".nauka_351_400" />
         <activity android:name=".nauka_301_350" />
         <activity android:name=".nauka_251_300" />
@@ -17,12 +17,12 @@
         <activity android:name=".nauka_201_250" />
         <activity android:name=".nauka_151_200" />
         <activity android:name=".nauka_101_150" />
-        <activity android:name=".menu" />
         <activity android:name=".nauka_1_50" />
+        <activity android:name=".menu" />
         <activity android:name=".autor" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"  />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
