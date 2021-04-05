@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fiszki</string>
+    <string name="app_name">Fiszki </string>
     <color name="red">#cd0a0a</color>
     <color name="green">#158467</color>
     <color name="blue">#0f4c75</color>

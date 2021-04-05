@@ -1,11 +1,14 @@
 package com.example.aplikacjafiszki;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class menu extends AppCompatActivity {
 private Button b_1_50;
@@ -21,6 +24,12 @@ private Button b_401_450;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        ConstraintLayout constraintLayout = findViewById(R.id.main_layout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(1000);
+        animationDrawable.setExitFadeDuration(3000);
+        animationDrawable.start();
 
         b_1_50 = (Button) findViewById(R.id.b_1_50);
         b_1_50.setOnClickListener(new View.OnClickListener() {
