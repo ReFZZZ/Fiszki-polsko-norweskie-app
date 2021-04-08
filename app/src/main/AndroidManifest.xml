@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".nauka_551_600"/>
+        <activity android:name=".nauka_501_550"/>
+        <activity android:name=".nauka_451_500"/>
         <activity android:name=".nauka_401_450"/>
         <activity android:name=".nauka_351_400" />
         <activity android:name=".nauka_301_350" />
@@ -18,8 +21,8 @@
         <activity android:name=".nauka_151_200" />
         <activity android:name=".nauka_101_150" />
         <activity android:name=".nauka_1_50" />
-        <activity android:name=".menu" />
-        <activity android:name=".autor" />
+        <activity android:name=".menu" android:screenOrientation="portrait" />
+        <activity android:name=".about" />
         <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"  />

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class nauka_51_100 extends AppCompatActivity {
+public class nauka_501_550 extends AppCompatActivity {
     private Random rand= new Random();
     private Button b_obroc;
     private Button b_nastepna;
@@ -19,11 +19,11 @@ public class nauka_51_100 extends AppCompatActivity {
     //ZBIÓR WSZYSTKICH SŁOW GDZIE {"NUMER_FISZKI","SLOWO_POLSKIE","SLOWO_W_JEZYKU_OBCYM"},
     //W ZALEZNOSCI OD WYBRANEGO ZESTAWU ID FISZKI PRZY WYSWIETLANIU BEDZIE ZWIEKSZANE O KONKRETNA LICZBE SETEK
     public String[][] tablica = {
-            {"1","ja","jeg"},{"2","ty","du "},{"3","on","han"},{"4","ona","hun"},{"5","ono","det"},{"6","on, ona","den"},{"7","my","vi "},{"8","wy","dere"},{"9","oni, one","de "}, {"10","mnie, mi, mną","meg"},
-            {"11","ciebie, ci, cię, tobie, tobą","deg"},{"12","jego, jemu, nim","ham, han"},{"13","jej, niej, ją, nią","henne"},{"14","je, jego, jemu, nim","det "},{"15","jego, jemu, nim, jej, niej, ją, nią","den"},{"16","nas, nam, nami","oss"},{"17","was, wam, wami","dere"},{"18","ich, im, nim, nich","dem"},{"19","kto?","hvem?"},{"20","co?","hva?"},
-            {"21","który?, jaki?","hvilken?"},{"22","czyj?","hvem sin?"},{"23","mój","min"},{"24","twój","din"},{"25","jego","hans"},{"26","jej","hannes"},{"27","jego, jej","dens"},{"28","jego","dets"},{"29","nasz","vår"},{"30","wasz","deres"},
-            {"31","ich","deres"},{"32","moja","mi "},{"33","twoja","di"},{"34","nasza","vår"},{"35","moje","mitt"},{"36","twoje","ditt"},{"37","nasze","vårt"},{"38","moi, moje","mine"},{"39","twoi, twoje","dine"},{"40","nasi, nasze","våre"},
-            {"41","swój","sin"},{"42","swoja","si "},{"43","swoje","sitt"},{"44","swoi, swoje","sine"},{"45","gdzie?","hvor?"},{"46","kiedy?","når?"},{"47","jak?, jaki?, jaka?, w jaki sposób?","hvordan?"},{"48","który?, która?, które?, jaki?, jaka?, jakie?","hvilken?"},{"49","dlaczego?","hvorfor?"},{"50","pytać","spørre"}
+            {"1","zdrowie","ei helse"},{"2","kasa","ei kasse"},{"3","mysz","ei mus"},{"4","śmieci","ei soppel"},{"5","nożyczki","ei saks"},{"6","kot","ei katt"},{"7","strona","ei side"},{"8","książka","ei bok"},{"9","gazeta","ei avis"}, {"10","noc","ei natt"},
+            {"11","ciasto","ei kake"},{"12","zegar","ei klokke"},{"13","drzwi","ei dør"},{"14","klase","ei klasse"},{"15","włosy","et hår"},{"16","salon","ei stue"},{"17","prom","ei ferje"},{"18","wóz","ei vogn"},{"19","mazak, pisak","en tusj"},{"20","most","en bro"},
+            {"21","drewno","et tre"},{"22","serce","et hjerte"},{"23","ucho","et øre"},{"24","adres","ei adresse"},{"25","język","ei tunge"},{"26","regał","ei hylle"},{"27","ciocia","ei tante"},{"28","port","ei havn"},{"29","pociąg","et tog"},{"30","samolot","et fly"},
+            {"31","telewizor","en tv-apparat"},{"32","twarz","et ansikt"},{"33","stacja","en stasjon"},{"34","lampa","ei lampe"},{"35","głowa","et hode"},{"36","ząb","ei tann"},{"37","szyja, gardło","en hals"},{"38","podłoga","et gulv"},{"39","pokój","et rom"},{"40","pokój dziecięcy","et barnerom"},
+            {"41","kuchnia","ei kjøkken"},{"42","dom","et hjem"},{"43","łazienka","et bad"},{"44","toaleta","et toalett"},{"45","piwo","et øl"},{"46","statek","et skip"},{"47","żona","ei kone"},{"48","długopis","en penn"},{"49","fotel","en lanestol"},{"50","oczywiście","selvfølgelig"}
     };
     View view;
 
@@ -32,11 +32,11 @@ public class nauka_51_100 extends AppCompatActivity {
 
     // ZIENNA losowa SŁUŻY DO WYLOSOWANIA NOWEGO NUMERU FISZKI
     private Integer random= rand.nextInt(50) ;
-
+    private String cutString = new String();
 
     // POLA SLUZACE DO PRZESUNIECIA NUMERU FISZEK O SETKI
     private int nrFiszkiInt;
-    private int przesuniecie =50;
+    private int przesuniecie =500;
     private int nrFiszkiPoDodaniu;
 
     private String numerFiszki;
@@ -83,7 +83,15 @@ public class nauka_51_100 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 numer_fiszki.setText(zwrocNumerFiszki());
-
+                cutString= tablica[random][2].substring(0,3);
+                //SPRAWDZENIE RODZAJNIKA W JEZYKU NORWESKIM, W ZALEZNOSCI OD NIEGO ZMIENA SIE KOLOR TŁA APLIKACJI
+                switch (cutString){
+                    case "en " : {view.setBackgroundResource(R.drawable.gradient_blue);break;}
+                    case "ei " : {view.setBackgroundResource(R.drawable.gradient_red);break;}
+                    case "en/" : {view.setBackgroundResource(R.drawable.gradient_orange);break;}
+                    case "et " : {view.setBackgroundResource(R.drawable.gradient_green);break;}
+                    default: view.setBackgroundResource(R.drawable.gradient_grey);break;
+                }
                 // SPRAWDZENIE I ZMIANA FLAGI. ZMIANA JEZYKA FISZKI
                 switch(flag) {
                     case 0:   message.setText(tablica[random][1]);flag =1;

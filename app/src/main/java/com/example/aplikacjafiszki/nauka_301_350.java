@@ -54,7 +54,7 @@ public class nauka_301_350 extends AppCompatActivity {
         numer_fiszki.setText(zwrocNumerFiszki());
 
         view  = this.getWindow().getDecorView();
-        view.setBackgroundResource(R.color.standard);
+        view.setBackgroundResource(R.drawable.gradient_grey);
         // PRZYCISK "DALEJ"
         b_nastepna=(Button) findViewById(R.id.b_nastepna);
         b_nastepna.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class nauka_301_350 extends AppCompatActivity {
                 //ZMIANA FISZKI ORAZ ZMIANA NUMERU FISZKI
                 message.setText(tablica[random][1]);
                 numer_fiszki.setText(zwrocNumerFiszki());
-                view.setBackgroundResource(R.color.standard);
+                view.setBackgroundResource(R.drawable.gradient_grey);
 
             }
         });

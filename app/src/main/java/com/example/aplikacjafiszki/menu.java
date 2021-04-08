@@ -20,6 +20,9 @@ private Button b_251_300;
 private Button b_301_350;
 private Button b_351_400;
 private Button b_401_450;
+private Button b_451_500;
+private Button b_501_550;
+private Button b_551_600;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +62,7 @@ private Button b_401_450;
         b_151_200.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                open150_200();
+                open151_200();
             }
         });
 
@@ -67,7 +70,7 @@ private Button b_401_450;
         b_201_250.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                open200_251();
+                open201_250();
             }
         });
 
@@ -102,6 +105,30 @@ private Button b_401_450;
             open401_450();
             }
         });
+
+        b_451_500 = (Button) findViewById(R.id.b_451_500);
+        b_451_500.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open451_500();
+            }
+        });
+
+        b_501_550 = (Button) findViewById(R.id.b_501_550);
+        b_501_550.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open501_550();
+            }
+        });
+
+        b_551_600 = (Button) findViewById(R.id.b_551_600);
+        b_551_600.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open551_600();
+            }
+        });
     }
 
     public void open1_50() {
@@ -116,11 +143,11 @@ private Button b_401_450;
         Intent intent = new Intent(this, nauka_101_150.class);
         startActivity(intent);
     }
-    public void open150_200(){
+    public void open151_200(){
         Intent intent = new Intent(this,nauka_151_200.class);
         startActivity(intent);
     }
-    public void open200_251(){
+    public void open201_250(){
         Intent intent = new Intent(this, nauka_201_250.class);
         startActivity(intent);
     }
@@ -138,6 +165,18 @@ private Button b_401_450;
     }
     public void open401_450(){
         Intent intent = new Intent(this,nauka_401_450.class);
+        startActivity(intent);
+    }
+    public void open451_500(){
+        Intent intent = new Intent(this,nauka_451_500.class);
+        startActivity(intent);
+    }
+    public void open501_550(){
+        Intent intent = new Intent(this,nauka_501_550.class);
+        startActivity(intent);
+    }
+    public void open551_600(){
+        Intent intent = new Intent(this,nauka_551_600.class);
         startActivity(intent);
     }
 }

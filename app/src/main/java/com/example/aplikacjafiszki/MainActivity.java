@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openAutor() {
-        Intent intent = new Intent(this, autor.class);
+        Intent intent = new Intent(this, about.class);
         startActivity(intent);
     }
 

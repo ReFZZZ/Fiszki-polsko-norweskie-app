@@ -54,7 +54,7 @@ public class nauka_351_400 extends AppCompatActivity {
         numer_fiszki.setText(zwrocNumerFiszki());
 
         view  = this.getWindow().getDecorView();
-        view.setBackgroundResource(R.color.standard);
+        view.setBackgroundResource(R.drawable.gradient_grey);
         // PRZYCISK "DALEJ"
         b_nastepna=(Button) findViewById(R.id.b_nastepna);
         b_nastepna.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class nauka_351_400 extends AppCompatActivity {
                 //ZMIANA FISZKI ORAZ ZMIANA NUMERU FISZKI
                 message.setText(tablica[random][1]);
                 numer_fiszki.setText(zwrocNumerFiszki());
-                view.setBackgroundResource(R.color.standard);
+                view.setBackgroundResource(R.drawable.gradient_grey);
 
             }
         });
@@ -86,11 +86,11 @@ public class nauka_351_400 extends AppCompatActivity {
                 cutString= tablica[random][2].substring(0,3);
                 //SPRAWDZENIE RODZAJNIKA W JEZYKU NORWESKIM, W ZALEZNOSCI OD NIEGO ZMIENA SIE KOLOR TŁA APLIKACJI
                 switch (cutString){
-                    case "en " : {view.setBackgroundResource(R.color.blue);break;}
-                    case "ei " : {view.setBackgroundResource(R.color.red);break;}
-                    case "en/" : {view.setBackgroundResource(R.color.yellow);break;}
-                    case "et " : {view.setBackgroundResource(R.color.green);break;}
-                    default: view.setBackgroundResource(R.color.standard);break;
+                    case "en " : {view.setBackgroundResource(R.drawable.gradient_blue);break;}
+                    case "ei " : {view.setBackgroundResource(R.drawable.gradient_red);break;}
+                    case "en/" : {view.setBackgroundResource(R.drawable.gradient_orange);break;}
+                    case "et " : {view.setBackgroundResource(R.drawable.gradient_green);break;}
+                    default: view.setBackgroundResource(R.drawable.gradient_grey);break;
                 }
                 // SPRAWDZENIE I ZMIANA FLAGI. ZMIANA JEZYKA FISZKI
                 switch(flag) {

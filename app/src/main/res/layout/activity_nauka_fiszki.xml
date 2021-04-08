@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
+
     android:orientation="vertical"
     tools:context=".nauka_1_50">
 
@@ -13,6 +14,7 @@
         android:layout_width="99dp"
         android:layout_height="46dp"
         android:gravity="center"
+        android:textColor="#cccccc"
         android:text=" "
         android:textSize="20dp" />
 
@@ -21,7 +23,7 @@
         android:layout_width="294dp"
         android:layout_height="206dp"
         android:layout_centerInParent="true"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/ubuntu_bold"
         android:gravity="center"
         android:textColor="#000000"
         android:text="słowo"
@@ -32,6 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/bChangeText"
+        android:textColor="#FFFFFF"
+        android:width="120dp"
+        android:background="@drawable/custom_button_nauka_fiszki_activity"
         android:text="Nastepna" />
 
     <Button
@@ -40,6 +45,9 @@
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:width="120dp"
+        android:background="@drawable/custom_button_nauka_fiszki_activity"
         android:text="Obróć" />
 
 </RelativeLayout>
