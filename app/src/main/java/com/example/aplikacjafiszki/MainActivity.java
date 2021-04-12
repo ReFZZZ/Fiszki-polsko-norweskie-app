@@ -1,22 +1,19 @@
 package com.example.aplikacjafiszki;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b_fiszki;
-    private Button b_autor;
-    private Button b_wyjscie;
+    private Button bWords;
+    private Button bAbout;
+    private Button bExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,44 +27,44 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
 
         // PRZYCISK FISZKI
-        b_fiszki = (Button) findViewById(R.id.b_fiszki);
-        b_fiszki.setOnClickListener(new View.OnClickListener() {
+        bWords = (Button) findViewById(R.id.bWords);
+        bWords.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFiszki();
+                openWords();
             }
         });
 
         // PRZYCISK AUTOR
-        b_autor = (Button) findViewById(R.id.b_autor);
-        b_autor.setOnClickListener(new View.OnClickListener() {
+        bAbout = (Button) findViewById(R.id.bAbout);
+        bAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openAutor();
+                openAbout();
             }
         });
         // PRZYCISK WYJSCIE
-        b_wyjscie = (Button) findViewById(R.id.b_wyjscie);
-        b_wyjscie.setOnClickListener(new View.OnClickListener() {
+        bExit = (Button) findViewById(R.id.bExit);
+        bExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWyjscie();
+                openExit();
             }
         });
     }
 
-    public void openFiszki() {
+    public void openWords() {
         Intent intent = new Intent(this, menu.class);
         startActivity(intent);
 
     }
 
-    public void openAutor() {
+    public void openAbout() {
         Intent intent = new Intent(this, about.class);
         startActivity(intent);
     }
 
-    public void openWyjscie() {
+    public void openExit() {
         finish();
         System.exit(0);
     }

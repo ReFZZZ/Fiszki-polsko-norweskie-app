@@ -13,6 +13,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:textColor="#FFFFFF"
-        android:text="O aplikacji:\n04/2021 \nAplikacja umożliwiająca naukę języka norweskiego poprzez naukę słówek zastępując fiszki w formie papierowej - fiszkami w formie elektronicznej. Obecnie aplikacja posiada ponad 600 słówek w języku polskim i norweskim. \nNazwa aplikacji: Fiszki Polsko-Norweskie\nAutor: Rafał Osypanka / ReFZZZ \n2021"
+        android:text="O aplikacji:\n04/2021 \nAplikacja umożliwiająca naukę języka norweskiego poprzez naukę słówek zastępując fiszki w formie papierowej - fiszkami w formie elektronicznej. Obecnie aplikacja posiada ponad 600 słówek w języku polskim i norweskim. \nNazwa aplikacji: Fiszki Polsko-Norweskie\nAutor: Rafał Osypanka / ReFZZZ (GitHub) \n2021"
         />
 </LinearLayout>

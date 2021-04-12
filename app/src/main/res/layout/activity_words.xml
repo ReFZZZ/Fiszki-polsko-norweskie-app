@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
 
     android:orientation="vertical"
-    tools:context=".nauka_1_50">
+    tools:context=".words_1_50">
 
     <TextView
-        android:id="@+id/numer_fiszki"
+        android:id="@+id/word_number"
         android:layout_width="99dp"
         android:layout_height="46dp"
         android:gravity="center"
@@ -30,24 +29,24 @@
         android:textSize="30dp" />
 
     <Button
-        android:id="@+id/b_nastepna"
+        android:id="@+id/b_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/bChangeText"
+        android:layout_alignTop="@id/b_ChangeText"
         android:textColor="#FFFFFF"
         android:width="120dp"
-        android:background="@drawable/custom_button_nauka_fiszki_activity"
-        android:text="Nastepna" />
+        android:background="@drawable/custom_button_words_activity"
+        android:text="Następna" />
 
     <Button
-        android:id="@+id/bChangeText"
+        android:id="@+id/b_ChangeText"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:width="120dp"
-        android:background="@drawable/custom_button_nauka_fiszki_activity"
+        android:background="@drawable/custom_button_words_activity"
         android:text="Obróć" />
 
 </RelativeLayout>

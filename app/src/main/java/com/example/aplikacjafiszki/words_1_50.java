@@ -9,16 +9,16 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class nauka_1_50 extends AppCompatActivity {
+public class words_1_50 extends AppCompatActivity {
     private Random rand= new Random();
-    private Button b_obroc;
-    private Button b_nastepna;
+    private Button bReverse;
+    private Button bNext;
     private TextView message;
-    private TextView numer_fiszki;
+    private TextView wordNumber;
 
     //ZBIÓR WSZYSTKICH SŁOW GDZIE {"NUMER_FISZKI","SLOWO_POLSKIE","SLOWO_W_JEZYKU_OBCYM"},
     //W ZALEZNOSCI OD WYBRANEGO ZESTAWU ID FISZKI PRZY WYSWIETLANIU BEDZIE ZWIEKSZANE O KONKRETNA LICZBE SETEK
-    public String[][] tablica = {
+    public String[][] tab = {
             {"1","kot","en katt"},{"2","pies","en hund"},{"3","koń","en hest"},{"4","mysz","en/ei mus"},{"5","rekin","en hai"},{"6","koza","en/ei geit"},{"7","lew","en/ei løve"},{"8","ryś","en/ei gaupe"},{"9","świnia","en gris"}, {"10","małpa","en/ei ape"},
             {"11","jeleń","en hjort"},{"12","lis","en rev"},{"13","niedźwiedź","en bjørn"},{"14","wilk","en ulv "},{"15","krowa","en/ei ku"},{"16","owca","en sau"},{"17","ryba","en fisk"},{"18","osioł","et esel"},{"19","kaczka","en/ei and"},{"20","wąż","en slange"},
             {"21","ptak","en fugl"},{"22","wiewiórka","en ekorn"},{"23","królik","en kanin"},{"24","krokodyl","en krokodille"},{"25","tygrys","en tiger"},{"26","wół","en okse"},{"27","kura","en høne"},{"28","kogut","en hane"},{"29","kurczak","en kylling"},{"30","orzeł","en/ei ørn"},
@@ -26,63 +26,60 @@ public class nauka_1_50 extends AppCompatActivity {
             {"41","fioletowy","lilla"},{"42","owoce","frukt"},{"43","jabłko","et eple"},{"44","pomarańcza","en appelsin"},{"45","gruszka","en/ei pære"},{"46","truskawka","et jordbær"},{"47","malina","et bringebær"},{"48","jagoda","et blåbær"},{"49","śliwka","en/ei plomme"},{"50","winogrono","en/ei drue"}
     };
     View view;
-
     // FLAGA SLUŻY DO ZMIANY JEZYKA. GDZIE 0- POLSKI, 1- NORWESKI
     private Integer flag =1;
     // ZIENNA losowa SŁUŻY DO WYLOSOWANIA NOWEGO NUMERU FISZKI
     private Integer random= rand.nextInt(50) ;
     private String cutString = new String();
-
     // POLA SLUZACE DO PRZESUNIECIA NUMERU FISZEK O SETKI
-    private int nrFiszkiInt;
-    private int przesuniecie =0;
-    private int nrFiszkiPoDodaniu;
-
-    private String numerFiszki;
+    private int numberWordInt;
+    private int shift =0;
+    private int wordNumberAfterAddition;
+    private String wordNumberString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nauka_fiszki);
+        setContentView(R.layout.activity_words);
 
         message =(TextView) findViewById(R.id.tvMessage);
-        numer_fiszki=(TextView) findViewById(R.id.numer_fiszki);
+        wordNumber =(TextView) findViewById(R.id.word_number);
 
-        message.setText(tablica[random][1]);
+        message.setText(tab[random][1]);
 
         //ZWIEKSZENIE NUMERU FISZKI POPRZEZ DODANIE SETEK, ZAMIANA STRING NA INT -> DODANIE SETEK -> ZAMIANA INT NA STRING
-        numer_fiszki.setText(zwrocNumerFiszki());
+        wordNumber.setText(returnWordNumber());
 
         view  = this.getWindow().getDecorView();
         view.setBackgroundResource(R.drawable.gradient_grey);
         // PRZYCISK "DALEJ"
-        b_nastepna=(Button) findViewById(R.id.b_nastepna);
-        b_nastepna.setOnClickListener(new View.OnClickListener() {
+        bNext =(Button) findViewById(R.id.b_next);
+        bNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer aktualna_losowa =random;
+                Integer currentRandom =random;
                 flag =1;
                 // PĘTLA UNIEMOŻLIWIAJĄCA POWTARZANIE SIĘ FISZEK
                 // -->
-                while(aktualna_losowa==random)
+                while(currentRandom==random)
                 {
                     random = rand.nextInt(50);
                 }
                 // <--
                 //ZMIANA FISZKI ORAZ ZMIANA NUMERU FISZKI
-                message.setText(tablica[random][1]);
-                numer_fiszki.setText(zwrocNumerFiszki());
+                message.setText(tab[random][1]);
+                wordNumber.setText(returnWordNumber());
                 view.setBackgroundResource(R.drawable.gradient_grey);
 
             }
         });
 
         //PRZYCISK ZMIANY JEZYKA FISZKI -->
-        b_obroc =(Button) findViewById(R.id.bChangeText);
-        b_obroc.setOnClickListener(new View.OnClickListener() {
+        bReverse =(Button) findViewById(R.id.b_ChangeText);
+        bReverse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numer_fiszki.setText(zwrocNumerFiszki());
-                cutString= tablica[random][2].substring(0,3);
+                wordNumber.setText(returnWordNumber());
+                cutString= tab[random][2].substring(0,3);
                 //SPRAWDZENIE RODZAJNIKA W JEZYKU NORWESKIM, W ZALEZNOSCI OD NIEGO ZMIENA SIE KOLOR TŁA APLIKACJI
                 switch (cutString){
                     case "en " : {view.setBackgroundResource(R.drawable.gradient_blue);break;}
@@ -93,9 +90,9 @@ public class nauka_1_50 extends AppCompatActivity {
                 }
                 // SPRAWDZENIE I ZMIANA FLAGI. ZMIANA JEZYKA FISZKI
                 switch(flag) {
-                    case 0:   message.setText(tablica[random][1]);flag =1;
+                    case 0:   message.setText(tab[random][1]);flag =1;
                         break;
-                    case 1:   message.setText(tablica[random][2]);flag =0;
+                    case 1:   message.setText(tab[random][2]);flag =0;
                         break;
                 }
 
@@ -104,10 +101,10 @@ public class nauka_1_50 extends AppCompatActivity {
         });
         //<--PRZYCISK ZMIANY JEZYKA FISZKI
     }
-    private String zwrocNumerFiszki(){
-        nrFiszkiInt = Integer.parseInt(tablica[random][0]);
-        nrFiszkiPoDodaniu = nrFiszkiInt + przesuniecie;
-        numerFiszki = String.valueOf(nrFiszkiPoDodaniu);
-        return numerFiszki;
+    private String returnWordNumber(){
+        numberWordInt = Integer.parseInt(tab[random][0]);
+        wordNumberAfterAddition = numberWordInt + shift;
+        wordNumberString = String.valueOf(wordNumberAfterAddition);
+        return wordNumberString;
     }
 }

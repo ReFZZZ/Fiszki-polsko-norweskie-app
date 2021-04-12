@@ -8,7 +8,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 public class menu extends AppCompatActivity {
 private Button b_1_50;
@@ -132,51 +131,51 @@ private Button b_551_600;
     }
 
     public void open1_50() {
-        Intent intent = new Intent(this, nauka_1_50.class);
+        Intent intent = new Intent(this, words_1_50.class);
         startActivity(intent);
     }
     public void open51_100() {
-        Intent intent = new Intent(this, nauka_51_100.class);
+        Intent intent = new Intent(this, words_51_100.class);
         startActivity(intent);
     }
     public void open101_150(){
-        Intent intent = new Intent(this, nauka_101_150.class);
+        Intent intent = new Intent(this, words_101_150.class);
         startActivity(intent);
     }
     public void open151_200(){
-        Intent intent = new Intent(this,nauka_151_200.class);
+        Intent intent = new Intent(this, words_151_200.class);
         startActivity(intent);
     }
     public void open201_250(){
-        Intent intent = new Intent(this, nauka_201_250.class);
+        Intent intent = new Intent(this, words_201_250.class);
         startActivity(intent);
     }
     public void open251_300(){
-        Intent intent = new Intent(this,nauka_251_300.class);
+        Intent intent = new Intent(this, words_251_300.class);
         startActivity(intent);
     }
     public void open301_350(){
-        Intent intent = new Intent(this,nauka_301_350.class);
+        Intent intent = new Intent(this, words_301_350.class);
         startActivity(intent);
     }
     public void open351_400(){
-        Intent intent = new Intent(this,nauka_351_400.class);
+        Intent intent = new Intent(this, words_351_400.class);
         startActivity(intent);
     }
     public void open401_450(){
-        Intent intent = new Intent(this,nauka_401_450.class);
+        Intent intent = new Intent(this, words_401_450.class);
         startActivity(intent);
     }
     public void open451_500(){
-        Intent intent = new Intent(this,nauka_451_500.class);
+        Intent intent = new Intent(this, words_451_500.class);
         startActivity(intent);
     }
     public void open501_550(){
-        Intent intent = new Intent(this,nauka_501_550.class);
+        Intent intent = new Intent(this, words_501_550.class);
         startActivity(intent);
     }
     public void open551_600(){
-        Intent intent = new Intent(this,nauka_551_600.class);
+        Intent intent = new Intent(this, words_551_600.class);
         startActivity(intent);
     }
 }
