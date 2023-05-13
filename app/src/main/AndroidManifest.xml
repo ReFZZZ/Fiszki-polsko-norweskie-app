@@ -4,26 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".words_551_600"/>
-        <activity android:name=".words_501_550"/>
-        <activity android:name=".words_451_500"/>
-        <activity android:name=".words_401_450"/>
-        <activity android:name=".words_351_400" />
-        <activity android:name=".words_301_350" />
-        <activity android:name=".words_251_300" />
-        <activity android:name=".words_51_100" />
-        <activity android:name=".words_201_250" />
-        <activity android:name=".words_151_200" />
-        <activity android:name=".words_101_150" />
-        <activity android:name=".words_1_50" />
-        <activity android:name=".menu" android:screenOrientation="portrait" />
-        <activity android:name=".about" />
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name=".Activities.Flashcards" />
+        <activity android:name=".Activities.Menu" android:screenOrientation="portrait" />
+        <activity android:name=".Activities.About" />
+        <activity android:name=".Activities.MainMenu" android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"  />
 

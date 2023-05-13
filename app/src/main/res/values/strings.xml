@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">Fiszki Polsko-Norweskie</string>
-    <color name="red">#cd0a0a</color>
-    <color name="green">#158467</color>
-    <color name="blue">#0f4c75</color>
-    <color name="yellow">#cf7500</color>
-    <color name="standard">#84a9ac</color>
+    <string name="about_application">O aplikacji:\n 04/2021 \n\tAplikacja umożliwiająca naukę języka norweskiego poprzez naukę słówek zastępując fiszki w formie papierowej - fiszkami w formie elektronicznej. Obecnie aplikacja posiada ponad 600 słówek w języku polskim i norweskim. \n 04/2023 \n\tRefaktoryzacja kodu. \nNazwa aplikacji: Fiszki Polsko-Norweskie\nAutor: Rafał/ReFZero (GitHub) \n2023</string>
 </resources>

@@ -8,7 +8,7 @@
     android:background="@drawable/gradient_list"
     android:id="@+id/main_layout"
     android:padding="10dp"
-    tools:context=".menu">
+    tools:context=".Activities.Menu">
 
     <TextView
         android:id="@+id/textView2"

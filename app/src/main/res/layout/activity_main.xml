@@ -6,7 +6,7 @@
     android:background="@drawable/gradient_list"
     android:orientation="vertical"
     android:id="@+id/main_layout"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainMenu">
 
     <TextView
         android:id="@+id/textTitle"
