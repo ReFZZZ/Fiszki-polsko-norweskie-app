@@ -1,4 +1,4 @@
-//The class is used to create objects by deserializing from JSON
+//The class is used to create objects by mapping from JSON
 package com.example.aplikacjafiszki.DataClasses;
 
 public class Word {

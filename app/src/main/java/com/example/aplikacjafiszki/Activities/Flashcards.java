@@ -1,6 +1,6 @@
 /*
 Activity class for flashcards.
-Deserialize JSON file to 'Word' class.
+Mapping JSON file to 'Word' class.
 Supports language change between polish and norwegian.
 Depending on the article in Norwegian, the background color changes.
 */
@@ -27,7 +27,7 @@ public class Flashcards extends AppCompatActivity {
 
     private Random rand = new Random();
     private Integer random = rand.nextInt(50);
-    private List<Word> wordList = new ArrayList<>();
+    private List<Word> wordList = new ArrayList<>(50);
     private Boolean isPolish = true;
     private String cutString;
     private ObjectMapper mapper = new ObjectMapper();
