@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aplikacjafiszki.DataClasses.Word;
@@ -55,8 +55,8 @@ public class Flashcards extends AppCompatActivity {
             try {
                 InputStream inputStream = getAssets().open(fileWithWords);
                 wordList = Arrays.asList(mapper.readValue(inputStream, Word[].class));
-            } catch (IOException e) {
-                throw new RuntimeException("File not exist!");
+            } catch (IOException ioException) {
+                Log.e("App", "Error: File not found! Check 'extras' file name." );
             }
         }
 
