@@ -1,14 +1,13 @@
 //Class allows to select a set of words
 package com.example.aplikacjafiszki.Activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.aplikacjafiszki.R;
 
@@ -26,8 +25,8 @@ public class Menu extends AppCompatActivity {
         animationDrawable.start();
 
         //Buttons
-        Button b_1_50    = findViewById(R.id.b_1_50);
-        Button b_51_100  = findViewById(R.id.b_51_100);
+        Button b_1_50 = findViewById(R.id.b_1_50);
+        Button b_51_100 = findViewById(R.id.b_51_100);
         Button b_101_150 = findViewById(R.id.b_101_150);
         Button b_151_200 = findViewById(R.id.b_151_200);
         Button b_201_250 = findViewById(R.id.b_201_250);
@@ -42,11 +41,11 @@ public class Menu extends AppCompatActivity {
         //Setting the behavior of the buttons
         b_1_50.setOnClickListener(view -> open(
                 new Intent(getApplicationContext(), Flashcards.class),
-                "word_1_50.json"));
+                "word_001_050.json"));
 
         b_51_100.setOnClickListener(view -> open(
                 new Intent(getApplicationContext(), Flashcards.class),
-                "word_51_100.json"));
+                "word_051_100.json"));
 
         b_101_150.setOnClickListener(view -> open(
                 new Intent(getApplicationContext(), Flashcards.class),
@@ -88,8 +87,8 @@ public class Menu extends AppCompatActivity {
                 new Intent(getApplicationContext(), Flashcards.class),
                 "word_551_600.json"));
     }
-//The method passes additional information about the name of the file to be deserialized to the next activity.
-    public void open(@NonNull Intent intent, String fileName) {
+    //The method passes additional information about the name of the file to be deserialized to the next activity.
+    public void open(Intent intent, String fileName) {
         intent.putExtra("fileWithWords", fileName);
         startActivity(intent);
     }
